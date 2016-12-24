@@ -42,7 +42,7 @@
                                 <rect key="frame" x="0.0" y="109" width="375" height="558"/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="p8S-Wz-29l">
-                                <rect key="frame" x="36" y="129" width="303" height="518"/>
+                                <rect key="frame" x="16" y="129" width="343" height="518"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Itz-Nz-gkF">
                                     <size key="itemSize" width="105" height="105"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -50,7 +50,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="LZW-E1-Obb">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="LZW-E1-Obb" customClass="PokeCell" customModule="Poke3" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="105" height="105"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -64,7 +64,7 @@
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="4" translatesAutoresizingMaskIntoConstraints="NO" id="wfN-el-Fy6">
+                                                <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="4" translatesAutoresizingMaskIntoConstraints="NO" id="wfN-el-Fy6">
                                                     <rect key="frame" x="0.0" y="0.0" width="105" height="80"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
@@ -82,6 +82,10 @@
                                             <constraint firstItem="wfN-el-Fy6" firstAttribute="leading" secondItem="LZW-E1-Obb" secondAttribute="leading" id="y8D-8r-iQC"/>
                                             <constraint firstAttribute="bottom" secondItem="zWc-4W-crE" secondAttribute="bottom" id="ycW-dp-SUl"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="thumbImage" destination="wfN-el-Fy6" id="p4n-gZ-H3Y"/>
+                                            <outlet property="thumbLabel" destination="zWc-4W-crE" id="Y0f-Zp-2Rc"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -95,13 +99,13 @@
                             <constraint firstItem="pnA-iV-zvy" firstAttribute="top" secondItem="EPd-Pi-7mi" secondAttribute="bottom" id="ZWy-vB-ndX"/>
                             <constraint firstItem="EPd-Pi-7mi" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="cP3-aI-JmC"/>
                             <constraint firstItem="pnA-iV-zvy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="nRz-tV-JGi"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="p8S-Wz-29l" secondAttribute="trailing" constant="20" id="ofV-KX-040"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="p8S-Wz-29l" secondAttribute="trailing" id="ofV-KX-040"/>
                             <constraint firstAttribute="trailing" secondItem="EPd-Pi-7mi" secondAttribute="trailing" id="rio-7u-ZT7"/>
                             <constraint firstAttribute="trailing" secondItem="pnA-iV-zvy" secondAttribute="trailing" id="rw4-Zx-E2X"/>
                             <constraint firstAttribute="trailing" secondItem="dOP-LG-sw0" secondAttribute="trailing" id="vUP-PQ-a4Z"/>
                             <constraint firstItem="dOP-LG-sw0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="xTM-tr-eSD"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="p8S-Wz-29l" secondAttribute="bottom" constant="20" id="yzT-dd-tKC"/>
-                            <constraint firstItem="p8S-Wz-29l" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="zkz-1t-ylr"/>
+                            <constraint firstItem="p8S-Wz-29l" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="zkz-1t-ylr"/>
                         </constraints>
                     </view>
                 </viewController>
