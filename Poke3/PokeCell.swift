@@ -14,6 +14,11 @@ class PokeCell: UICollectionViewCell {
     @IBOutlet var thumbLabel: UILabel!
     var pokemon: Pokemon!
 
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.layer.cornerRadius = 5.0
+    }
+
     func configCell(pokemon: Pokemon) {
         self.pokemon = pokemon
         self.thumbImage.image = UIImage(named: "\(self.pokemon.pokedeID)")
