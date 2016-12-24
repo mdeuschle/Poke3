@@ -142,11 +142,30 @@
                     <connections>
                         <outlet property="collectionView" destination="p8S-Wz-29l" id="9fb-fA-3fx"/>
                         <outlet property="searchBar" destination="pnA-iV-zvy" id="9FJ-hM-wyA"/>
+                        <segue destination="rFU-zs-Sbw" kind="show" identifier="DetailSegue" id="iH4-hS-FgJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="76" y="189.3553223388306"/>
+        </scene>
+        <!--Poke Detail View Controller-->
+        <scene sceneID="9Vz-1q-pGY">
+            <objects>
+                <viewController id="rFU-zs-Sbw" customClass="PokeDetailViewController" customModule="Poke3" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="80I-WY-O4f"/>
+                        <viewControllerLayoutGuide type="bottom" id="74n-Td-syi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ePt-eG-TXS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zPT-NW-1t6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="772" y="188.45577211394306"/>
         </scene>
     </scenes>
     <resources>
