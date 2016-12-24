@@ -25,7 +25,7 @@ class RootViewController: UIViewController, UICollectionViewDelegate, UICollecti
             return UICollectionViewCell()
         }
         let pokemon = Pokemon(name: "Pokemon", pokedexID: indexPath.row)
-        cell.configCell(pokemon: pokemon)
+        cell.configCell(pokemon)
         return cell
 
     }
