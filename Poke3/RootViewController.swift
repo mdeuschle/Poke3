@@ -26,6 +26,7 @@ class RootViewController: UIViewController, UICollectionViewDelegate, UICollecti
         collectionView.dataSource = self
         searchBar.delegate = self
         parsePokemonCSV()
+        searchBar.returnKeyType = .done
 //        initAudio()
     }
 
@@ -102,11 +103,16 @@ class RootViewController: UIViewController, UICollectionViewDelegate, UICollecti
         return CGSize(width: 105, height: 105)
     }
 
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        view.endEditing(true)
+    }
+
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
 
         if searchBar.text == nil || searchBar.text == "" {
             inSearchMode = false
             collectionView.reloadData()
+            view.endEditing(true)
         } else {
             inSearchMode = true
             let lowerText = searchBar.text!.lowercased()
