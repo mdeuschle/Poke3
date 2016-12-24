@@ -43,6 +43,9 @@
                                             <constraint firstAttribute="height" constant="28" id="ak1-38-M9x"/>
                                         </constraints>
                                         <state key="normal" image="music"/>
+                                        <connections>
+                                            <action selector="musicButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2mC-Hg-HMu"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.1437580933" blue="0.27873243650000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -56,7 +59,7 @@
                                     <constraint firstItem="aG0-NM-rpP" firstAttribute="top" secondItem="EPd-Pi-7mi" secondAttribute="top" constant="24" id="zj9-9h-8bk"/>
                                 </constraints>
                             </view>
-                            <searchBar contentMode="redraw" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pnA-iV-zvy">
+                            <searchBar contentMode="redraw" placeholder="Search Pokemon" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pnA-iV-zvy">
                                 <rect key="frame" x="0.0" y="65" width="375" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="lbT-hT-iYg"/>
@@ -138,6 +141,7 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="p8S-Wz-29l" id="9fb-fA-3fx"/>
+                        <outlet property="searchBar" destination="pnA-iV-zvy" id="9FJ-hM-wyA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
