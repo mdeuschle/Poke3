@@ -170,19 +170,23 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="JDM-Bc-ZW7">
-                                        <rect key="frame" x="10" y="24" width="30" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZkS-Q4-FP5">
+                                        <rect key="frame" x="20" y="27" width="25" height="25"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="30" id="TbR-nh-T0R"/>
-                                            <constraint firstAttribute="height" constant="30" id="xuc-wC-5gs"/>
+                                            <constraint firstAttribute="height" constant="25" id="SB1-Xi-gSB"/>
+                                            <constraint firstAttribute="width" constant="25" id="k97-Z4-Vfx"/>
                                         </constraints>
-                                    </imageView>
+                                        <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="backPuttonTapped:" destination="rFU-zs-Sbw" eventType="touchUpInside" id="lkE-bQ-poZ"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.1437580933" blue="0.27873243650000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="ZkS-Q4-FP5" firstAttribute="centerY" secondItem="bSw-ga-sF2" secondAttribute="centerY" id="4SI-o1-nWR"/>
                                     <constraint firstItem="bSw-ga-sF2" firstAttribute="top" secondItem="9ep-rM-Igh" secondAttribute="top" constant="29" id="AFy-8f-8wc"/>
-                                    <constraint firstItem="JDM-Bc-ZW7" firstAttribute="leading" secondItem="9ep-rM-Igh" secondAttribute="leading" constant="10" id="Wl7-DG-1el"/>
-                                    <constraint firstItem="JDM-Bc-ZW7" firstAttribute="centerY" secondItem="bSw-ga-sF2" secondAttribute="centerY" id="deh-ur-UVL"/>
+                                    <constraint firstItem="ZkS-Q4-FP5" firstAttribute="leading" secondItem="9ep-rM-Igh" secondAttribute="leading" constant="20" id="IK8-md-ueX"/>
                                     <constraint firstItem="bSw-ga-sF2" firstAttribute="leading" secondItem="9ep-rM-Igh" secondAttribute="leading" constant="50" id="fVk-Wc-q2E"/>
                                     <constraint firstAttribute="height" constant="65" id="hW7-ev-wSC"/>
                                     <constraint firstAttribute="bottom" secondItem="bSw-ga-sF2" secondAttribute="bottom" constant="15" id="i6L-L6-g3n"/>
@@ -425,12 +429,23 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="baseID" destination="cTc-Zr-D2O" id="hus-bZ-YKb"/>
+                        <outlet property="currentEvoImage" destination="ptc-6K-Blr" id="zqU-bm-HBC"/>
+                        <outlet property="defenseLabel" destination="fkc-7I-mdy" id="h4Y-EK-GF9"/>
+                        <outlet property="descriptionLabel" destination="nvZ-hg-axd" id="FuR-Aq-YKD"/>
+                        <outlet property="evoLabel" destination="H2V-UV-gWF" id="M59-y3-dZU"/>
+                        <outlet property="heightLabel" destination="bIC-Dw-tLe" id="knj-m9-SVU"/>
+                        <outlet property="mainImage" destination="JnS-Mg-xQc" id="yjc-iw-U9P"/>
+                        <outlet property="nextEvoImage" destination="7b5-WU-k5r" id="mVX-fc-ikn"/>
+                        <outlet property="pokeIDLabel" destination="7DX-KW-OCi" id="viv-ol-rX6"/>
                         <outlet property="titleLabel" destination="bSw-ga-sF2" id="dAr-sr-6RQ"/>
+                        <outlet property="typeLabel" destination="iOd-1c-0c5" id="w0h-mh-9Ck"/>
+                        <outlet property="weightLabel" destination="15g-Q0-6ZJ" id="klx-Y5-xVt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zPT-NW-1t6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="770.625" y="188.02816901408451"/>
+            <point key="canvasLocation" x="770.39999999999998" y="187.55622188905548"/>
         </scene>
     </scenes>
     <resources>
