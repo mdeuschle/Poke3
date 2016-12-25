@@ -27,6 +27,12 @@ class PokeDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let image = UIImage(named: String(poke.pokedeID))
+        mainImage.image = image
+        currentEvoImage.image = image
+        pokeIDLabel.text = String(poke.pokedeID)
+        titleLabel.text = poke.name.uppercased()
+
         poke.downloadPokeDetails {
 
             self.updateUI()
@@ -40,6 +46,7 @@ class PokeDetailViewController: UIViewController {
         defenseLabel.text = poke.defense
         heightLabel.text = poke.height
         weightLabel.text = poke.weight
+        typeLabel.text = poke.type
 
         
 
