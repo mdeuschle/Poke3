@@ -24,13 +24,24 @@ class PokeDetailViewController: UIViewController {
     @IBOutlet var nextEvoImage: UIImageView!
     @IBOutlet var evoLabel: UILabel!
 
-
-
-
-
-
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        poke.downloadPokeDetails {
+
+            self.updateUI()
+        }
+
+    }
+
+    func updateUI() {
+
+        baseID.text = poke.attack
+        defenseLabel.text = poke.defense
+        heightLabel.text = poke.height
+        weightLabel.text = poke.weight
+
+        
 
     }
 
