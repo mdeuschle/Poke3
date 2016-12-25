@@ -11,6 +11,7 @@ import UIKit
 class PokeDetailViewController: UIViewController {
 
     var poke: Pokemon!
+    @IBOutlet var titleLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
