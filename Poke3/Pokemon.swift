@@ -24,6 +24,14 @@ class Pokemon {
     private var _nextEvolutionID: String!
     private var _nextEvolutionLevel: String!
     private var _pokemonURL: String!
+    private var _movesDesc: String!
+
+    var movesDesc: String {
+        if _movesDesc == nil {
+            return ""
+        }
+        return _movesDesc
+    }
 
     var nextEvolutionName: String {
         if _nextEvolutionName == nil {
@@ -111,8 +119,6 @@ class Pokemon {
 
     func downloadPokeDetails(completed: @escaping DownloadComplete) {
 
-        print(self._pokemonURL)
-
         Alamofire.request(_pokemonURL).responseJSON { response in
             if let dic = response.result.value as? [String: Any] {
                 if let weight = dic["weight"] as? String {
@@ -156,6 +162,19 @@ class Pokemon {
                     }
                 } else {
                     self._description = ""
+                }
+                if let movesArray = dic["moves"] as? [[String: Any]], movesArray.count > 0 {
+                    if let movesURL = movesArray[0]["resource_uri"] as? String {
+                        let movesURL = "\(BASE_URL)\(movesURL)"
+                        Alamofire.request(movesURL).responseJSON(completionHandler: { (response) in
+                            if let movesDic = response.result.value as? [String: Any] {
+                                if let movesDesc = movesDic["description"] as? String {
+                                    print("MOVES: \(movesDesc)")
+                                    self._movesDesc = movesDesc
+                                }
+                            }
+                        })
+                    }
                 }
                 if let evolutions = dic["evolutions"] as? [[String: Any]], evolutions.count > 0 {
                     if let nextEvo = evolutions[0]["to"] as? String {

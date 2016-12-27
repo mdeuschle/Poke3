@@ -23,6 +23,7 @@ class PokeDetailViewController: UIViewController {
     @IBOutlet var currentEvoImage: UIImageView!
     @IBOutlet var nextEvoImage: UIImageView!
     @IBOutlet var evoLabel: UILabel!
+    @IBOutlet var segmentedControl: UISegmentedControl!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,9 +53,28 @@ class PokeDetailViewController: UIViewController {
         }
         let nexEvoString = "Next Evolution Name: \(poke.nextEvolutionName) | LVL \(poke.nextEvolutionID)"
         evoLabel.text = nexEvoString
+        if segmentedControl.selectedSegmentIndex == 0 {
+        } else {
+            descriptionLabel.text = poke.description
+
+        }
     }
 
     @IBAction func backPuttonTapped(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
+    @IBAction func didSelect(_ sender: UISegmentedControl) {
+        if segmentedControl.selectedSegmentIndex == 0 {
+            descriptionLabel.text = poke.description
+        } else {
+            descriptionLabel.text = poke.movesDesc
+        }
+    }
 }
+
+
+
+
+
+
+
