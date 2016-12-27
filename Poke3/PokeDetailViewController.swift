@@ -26,35 +26,35 @@ class PokeDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         let image = UIImage(named: String(poke.pokedeID))
         mainImage.image = image
         currentEvoImage.image = image
         pokeIDLabel.text = String(poke.pokedeID)
         titleLabel.text = poke.name.uppercased()
-
         poke.downloadPokeDetails {
-
             self.updateUI()
         }
-
     }
 
     func updateUI() {
-
         baseID.text = poke.attack
         defenseLabel.text = poke.defense
         heightLabel.text = poke.height
         weightLabel.text = poke.weight
         typeLabel.text = poke.type
-
-        
-
+        descriptionLabel.text = poke.description
+        if poke.nextEvolutionID == "" {
+            evoLabel.text = "No Evlolutions"
+            nextEvoImage.isHidden = true
+        } else {
+            nextEvoImage.isHidden = false
+            nextEvoImage.image = UIImage(named: poke.nextEvolutionID)
+        }
+        let nexEvoString = "Next Evolution Name: \(poke.nextEvolutionName) | LVL \(poke.nextEvolutionID)"
+        evoLabel.text = nexEvoString
     }
 
     @IBAction func backPuttonTapped(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
-
-
 }

@@ -27,7 +27,7 @@ class RootViewController: UIViewController, UICollectionViewDelegate, UICollecti
         searchBar.delegate = self
         parsePokemonCSV()
         searchBar.returnKeyType = .done
-//        initAudio()
+        initAudio()
     }
 
     func initAudio() {

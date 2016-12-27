@@ -111,6 +111,8 @@ class Pokemon {
 
     func downloadPokeDetails(completed: @escaping DownloadComplete) {
 
+        print(self._pokemonURL)
+
         Alamofire.request(_pokemonURL).responseJSON { response in
             if let dic = response.result.value as? [String: Any] {
                 if let weight = dic["weight"] as? String {
