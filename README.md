@@ -1,5 +1,5 @@
 # Poke3
-Pokemon app featuring API calls with details of all Pokemons
+Pokemon deck app featuring all Pokemon and their details.
 
 ####API calls
 ####Stack Views
